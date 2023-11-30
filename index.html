@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+           <div class="logo">
+              Shop<span>Ganern</span>
+           </div>
+           <ul>
+               <li class="active"><i class="fa-solid fa-house-user"></i> Home</li>
+               <li><i class="fa-regular fa-user"></i> Admin</li>
+               <li><i class="fa-solid fa-heart"></i> Favorite</li>
+           </ul>
+           <ul>
+               <li><i class="fa-brands fa-tiktok"></i> Tiktok</li>
+               <li><i class="fa-brands fa-facebook"></i> Facebook</li>
+               <li><i class="fa-brands fa-square-instagram"></i> Instagram</li>
+               <li><i class="fa-solid fa-gear"></i> Settings</li>
+           </ul>
+        </div>
+        <div class="center">
+            <div class="search">
+                <div class="form">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search...">
+                    <button>Search</button>
+                </div>
+            </div>
+
+            <h2>PRODUCTS</h2>
+            <div class="list">
+                <div class="item" data-key="1">
+                  <div class="img">
+                    <img src="iphone 15 pro.jpg" alt="">
+                  </div>
+                  <div class="content">
+                    <div class="title">Iphone 15 pro</div>
+                    <div class="des">
+                        The iPhone 15 starts at £799 / $799 / AU$1499, and the 15 Plus at £899 / $899 / AU$1649 – those are for the 128GB models.
+                    </div>
+                    <div class="price">₱ 56,990.</div>
+                    <input type="number" class="count" min="1" value="1">
+                    <button class="add">Add to cart</button>
+                    <button class="favourite" onclick="ToggleFavourite(1)"><i class="fa-solid fa-heart"></i></button>
+                    <button class="remove" onclick="Remove(1)"><i class="fa-solid fa-trash-can"></i></button>
+                  </div>
+                </div>
+
+                <div class="item" data-key="2">
+                    <div class="img">
+                        <img src="Air-Jordan-1-Mid-Chicago-554724-173-4.webp" alt="">
+                    </div>
+                    <div class="content">
+                        <div class="title">Nike Air Max</div>
+                        <div class="des">
+                            “Walk a mile in these shoes, and you'll feel unstoppable.”
+                        </div>
+                        <div class="price"> ₱ 11,199</div>
+                        <input type="number" class="count" min="2" value="2">
+                        <button class="add">Add to cart</button>
+                        <button class="favourite" onclick="ToggleFavourite(2)"><i class="fa-solid fa-heart"></i></button>
+                        <button class="remove" onclick="Remove(2)"><i class="fa-solid fa-trash-can"></i></button>
+                    </div>
+                </div>
+
+                <div class="item" data-key="3">
+                    <div class="img">
+                        <img src="predator laptop.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <div class="title">Acer Predator Helios 300</div>
+                        <div class="des">
+                            Acer Predator: Unleash the Beast Within.
+                        </div>
+                        <div class="price"> ₱ 57795.00</div>
+                        <input type="number" class="count" min="3" value="3">
+                        <button class="add">Add to cart</button>
+                        <button class="favourite" onclick="ToggleFavourite(3)"><i class="fa-solid fa-heart"></i></button>
+                        <button class="remove" onclick="Remove(3)"><i class="fa-solid fa-trash-can"></i></button>
+                    </div>
+                </div>
+
+                <div class="item" data-key="4">
+                    <div class="img">
+                        <img src="LOU61088_1_enlarged.webp" alt="">
+                    </div>
+                    <div class="content">
+                        <div class="title">LV Bag</div>
+                        <div class="des">
+                            Elevate Your Style with Timeless Elegance: LV Bag Perfection.
+                        </div>
+                        <div class="price"> $1,590.00 (USD)</div>
+                        <input type="number" class="count" min="4" value="4">
+                        <button class="add">Add to cart</button>
+                        <button class="favourite" onclick="ToggleFavourite(4)"><i class="fa-solid fa-heart"></i></button>
+                        <button class="remove" onclick="Remove(4)"><i class="fa-solid fa-trash-can"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart">
+            <div class="name">
+                <i class="fas fa-shopping-cart"></i> CART
+            </div>
+            <div class="listCart">
+            </div>
+            <div class="total">
+                Total Amount: <span id="total-amount">₱0</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
